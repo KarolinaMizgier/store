@@ -1,17 +1,15 @@
 package org.karolinaprojects.store;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonObject;
-import com.google.gson.stream.JsonWriter;
+
 import org.codehaus.jackson.map.ObjectMapper;
 
 import java.io.File;
 import java.io.IOException;
 import java.sql.Date;
-import java.text.spi.DateFormatProvider;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.*;
 
 public class Main {
@@ -24,12 +22,7 @@ public class Main {
 
     static Map<String, String> productsMapStrings = new HashMap<>();
     public static void main(String[] args) {
-	// write your code here
         List<String> list = FileUtil.read("./src/main/resources/products");
-
-        //Product product = new Product();
-       // System.out.println(list);
-
         List<Product> products = ProductSerializer.serialize(list);
         Map<Integer, Product> productsMap = new HashMap<>();
         products.forEach(product->{
@@ -42,41 +35,11 @@ public class Main {
        productsMapStrings.put(key.toString(),value.toString());
         });
 
-        JsonSerializer.mapStringStringToJson(productsMapStrings);
+        String json = JsonSerializer.serializeObject(products);
+        FileUtil.write(json,"./src/main/resources/json2.json");
 
-        ObjectMapper file = new ObjectMapper();
-        try {
-            file.writeValue(new File("./src/main/resources/json.json"), productsMapStrings);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
-        System.out.println(productsMapStrings);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       // List<Product> sortedProducts = ProductService.sortBy(products,"date");
-        //List<Product> occurance = ProductService.occurances(products, "season");
-
-        //System.out.println();
-
-
-
-        List<Product> productList = new ArrayList<>();
     }
 }
+//zamiana listy na mape
+//deserializacja, zamiana pliku .json na liste produktow
+

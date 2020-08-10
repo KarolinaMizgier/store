@@ -33,6 +33,25 @@ public class FileUtil {
         }
     }
 
+    public static void write(String text, String path){
+        FileWriter writer = null;
+        File f = new File(path);
+        BufferedWriter bw = null;
+        try {
+            bw = new BufferedWriter(new FileWriter(f, true));
+            bw.append(text);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                bw.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     public static List<String> read(String path) {
 
         List<String> textList = new ArrayList<>();
