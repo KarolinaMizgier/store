@@ -12,14 +12,14 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 public class ProductMapperTest {
-    @Test
 
+    @Test
     public void testProductMapper () throws ParseException {
         List<String> input = new ArrayList<>();
-        input.add("salt,consumable,1,13/02/2020");
+        input.add("1,salt,consumable,13/02/2020");
         List<Product> pattern = new ArrayList<>();
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH);
-        pattern.add(new Product("salt","consumable", 1, formatter.parse("6-Aug-2013")));
+        pattern.add(new Product("salt","consumable", 1, formatter.parse("13-Feb-2020")));
         List<Product> output = new ArrayList<>();
         output = ProductMapper.mapStringsToProducts(input);
 

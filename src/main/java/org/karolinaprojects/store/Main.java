@@ -1,16 +1,10 @@
 package org.karolinaprojects.store;
 
-
-import org.codehaus.jackson.map.ObjectMapper;
-
-import java.io.File;
-import java.io.IOException;
 import java.sql.Date;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Main {
 
@@ -36,9 +30,7 @@ public class Main {
         });
 
         String json = JsonSerializer.serializeObject(products);
-        //FileUtil.write(json,"./src/main/resources/json2.json");
-        //File jsonFile = new File("./src/main/resources/json2.json");
-        List<Product> deserialized = JsonSerializer.deserializeJson(json);
+        List<Product> deserialized = JsonDeserializer.deserializeJson(json);
         System.out.println(deserialized);
     }
 }
