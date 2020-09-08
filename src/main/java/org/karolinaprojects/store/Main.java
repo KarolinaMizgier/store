@@ -36,10 +36,11 @@ public class Main {
         });
 
         String json = JsonSerializer.serializeObject(products);
-        FileUtil.write(json,"./src/main/resources/json2.json");
-
+        //FileUtil.write(json,"./src/main/resources/json2.json");
+        //File jsonFile = new File("./src/main/resources/json2.json");
+        List<Product> deserialized = JsonSerializer.deserializeJson(json);
+        System.out.println(deserialized);
     }
 }
-//zamiana listy na mape
-//deserializacja, zamiana pliku .json na liste produktow
+
 
