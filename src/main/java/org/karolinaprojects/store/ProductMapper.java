@@ -14,13 +14,12 @@ public class ProductMapper {
     }
 
     public static Product mapStringMapToProduct(Map<String, String> map){
-
         Product product = new Product();
-        product.setId(Integer.parseInt(map.get("Id")));
-        product.setName(map.get("name"));
-        product.setType(map.get("type"));
+        product.setId(Integer.parseInt(map.get(ProductLabel.ID.value())));
+        product.setName(map.get(ProductLabel.NAME.value()));
+        product.setType(map.get(ProductLabel.TYPE.value()));
         try {
-            Date date = new SimpleDateFormat("dd/MM/yyyy").parse(map.get("date"));
+            Date date = new SimpleDateFormat("dd/MM/yyyy").parse(map.get(ProductLabel.DATE.value()));
             product.setDate(date);
         } catch (ParseException e) {
             e.printStackTrace();
@@ -34,20 +33,17 @@ public class ProductMapper {
         String[] split = text.split(",");
         List<String> strings = Arrays.asList(split);
         Product product = new Product();
-        product.setId(Integer.parseInt(strings.get(0)));
-        product.setName(strings.get(1));
+        product.setId(Integer.parseInt(strings.get(ProductIndex.ID.value())));
+        product.setName(strings.get(ProductIndex.NAME.value()));
 
         try {
-            Date date = new SimpleDateFormat("dd/MM/yyyy").parse(strings.get(2));
+            Date date = new SimpleDateFormat("dd/MM/yyyy").parse(strings.get(ProductIndex.DATE.value()));
             product.setDate(date);
         } catch (ParseException e) {
             e.printStackTrace();
         }
 
-        product.setType(strings.get(3));
+        product.setType(strings.get(ProductIndex.TYPE.value()));
         return product;
     }
-
-
-
 }
