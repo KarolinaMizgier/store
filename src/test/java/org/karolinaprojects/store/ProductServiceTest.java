@@ -1,13 +1,12 @@
 package org.karolinaprojects.store;
 
 import org.junit.Test;
+import org.karolinaprojects.store.model.Product;
+import org.karolinaprojects.store.service.ProductService;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 

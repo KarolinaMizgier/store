@@ -1,14 +1,13 @@
 package org.karolinaprojects.store;
 
-import com.google.gson.JsonObject;
 import org.junit.Test;
+import org.karolinaprojects.store.components.JsonDeserializer;
+import org.karolinaprojects.store.model.Product;
 import org.karolinaprojects.store.utils.TestUtil;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

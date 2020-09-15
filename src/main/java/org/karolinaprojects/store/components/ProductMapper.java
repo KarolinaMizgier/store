@@ -1,4 +1,8 @@
-package org.karolinaprojects.store;
+package org.karolinaprojects.store.components;
+
+import org.karolinaprojects.store.model.Product;
+import org.karolinaprojects.store.model.ProductIndex;
+import org.karolinaprojects.store.model.ProductLabel;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

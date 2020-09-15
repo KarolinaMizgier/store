@@ -1,6 +1,4 @@
-package org.karolinaprojects.store;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
+package org.karolinaprojects.store.model;
 
 import java.util.Date;
 import java.util.Objects;

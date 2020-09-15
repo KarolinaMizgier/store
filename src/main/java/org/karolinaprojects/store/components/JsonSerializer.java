@@ -1,4 +1,4 @@
-package org.karolinaprojects.store;
+package org.karolinaprojects.store.components;
 import org.codehaus.jackson.map.ObjectMapper;
 import java.io.IOException;
 import java.text.DateFormat;

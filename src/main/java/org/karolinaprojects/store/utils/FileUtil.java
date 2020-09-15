@@ -1,4 +1,4 @@
-package org.karolinaprojects.store;
+package org.karolinaprojects.store.utils;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

@@ -1,5 +1,7 @@
 package org.karolinaprojects.store;
 import org.junit.Test;
+import org.karolinaprojects.store.components.JsonSerializer;
+import org.karolinaprojects.store.model.Product;
 import org.karolinaprojects.store.utils.TestUtil;
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,8 @@
 package org.karolinaprojects.store;
 
 import org.junit.Test;
+import org.karolinaprojects.store.components.ProductMapper;
+import org.karolinaprojects.store.model.Product;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

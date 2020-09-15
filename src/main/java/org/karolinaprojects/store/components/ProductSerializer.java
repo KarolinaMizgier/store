@@ -1,4 +1,6 @@
-package org.karolinaprojects.store;
+package org.karolinaprojects.store.components;
+
+import org.karolinaprojects.store.model.Product;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package org.karolinaprojects.store;
+package org.karolinaprojects.store.model;
 
 public enum ProductIndex {
     ID(0),

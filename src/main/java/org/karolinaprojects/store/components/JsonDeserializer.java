@@ -1,7 +1,8 @@
-package org.karolinaprojects.store;
+package org.karolinaprojects.store.components;
 
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
+import org.karolinaprojects.store.model.Product;
 
 import java.io.IOException;
 import java.text.DateFormat;
